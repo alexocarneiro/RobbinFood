@@ -1,8 +1,9 @@
-ion-content{
 
-  --background: url('../../assets/TelaCadastro.jpeg');
-  --background-size: auto;
-  --background-position: start;
-}
+     ion-content {
 
+     --background: url('../../assets/TelaCadastro.jpeg');
+      background-size: contain;
+      background-position: center center;
+     }
 
+     
