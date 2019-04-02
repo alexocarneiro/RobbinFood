@@ -1,16 +1,8 @@
+ion-content{
 
-app-login{
-  
-  .bg-image{
-  background-image: url('../../assets/TelaCadastro.jpeg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  }
-
-  .no-scroll .scroll-content{
-    overflow: hidden;
-  }
+  --background: url('../../assets/TelaCadastro.jpeg');
+  --background-size: auto;
+  --background-position: start;
 }
 
 
