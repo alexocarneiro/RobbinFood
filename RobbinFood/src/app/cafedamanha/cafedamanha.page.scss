@@ -1,6 +1,8 @@
-ion-content {
-
-    --background: url('../../assets/tela_03_manha.jpg');
-     background-size: contain;
-     background-position: center center;
+:host {
+    ion-content {
+      --background:none;
+      background:url('../../assets/bg_tela_03_manha.jpg');
+      background-size: cover;
+      background-position: center center;
     }
+  }
