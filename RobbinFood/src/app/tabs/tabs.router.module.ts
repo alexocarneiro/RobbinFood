@@ -47,14 +47,15 @@ const routes: Routes = [
 
       {
         path: '',
-        redirectTo: '/tabs/mercado',
+        redirectTo: '/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/mercado',
+   redirectTo: '/login',
+    // redirectTo: '/tabs/mercado',
     pathMatch: 'full'
   }
 ];
