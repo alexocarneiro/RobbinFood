@@ -1,6 +1,9 @@
+:host{
 ion-content {
 
-    --background: url('../../assets/feira.jpg');
-     background-size: contain;
+    --background: none;
+     background: url('../../assets/feira.jpg');
+     background-size: cover;
      background-position: center center;
     }
+}

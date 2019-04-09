@@ -46,6 +46,67 @@ const routes: Routes = [
       },
 
       {
+        path: 'cafedamanha',
+        children: [
+          {
+            path: '',
+            loadChildren: '../cafedamanha/cafedamanha.module#CafedamanhaPageModule'
+          }
+        ]
+      },
+
+
+      {
+        path: 'colacao-i',
+        children: [
+          {
+            path: '',
+            loadChildren: '../colacao-i/colacao-i.module#ColacaoIPageModule'
+          }
+        ]
+      },
+
+      {
+        path: 'colacao-ii',
+        children: [
+          {
+            path: '',
+            loadChildren: '../colacao-ii/colacao-ii.module#ColacaoIIPageModule'
+          }
+        ]
+      },
+
+      {
+        path: 'almoco',
+        children: [
+          {
+            path: '',
+            loadChildren: '../almoco/almoco.module#AlmocoPageModule'
+          }
+        ]
+      },
+
+      {
+        path: 'jantar',
+        children: [
+          {
+            path: '',
+            loadChildren: '../jantar/jantar.module#JantarPageModule'
+          }
+        ]
+      },
+
+      {
+        path: 'quiz',
+        children: [
+          {
+            path: '',
+            loadChildren: '../quiz/quiz.module#QuizPageModule'
+          }
+        ]
+      },
+
+      {
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'

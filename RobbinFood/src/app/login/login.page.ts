@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
     //código de criação de cadastro Firebase
     console.log(this.inputValue);
 
-    this.navCtrl.navigateForward('home')
+    this.navCtrl.navigateForward('tabs/home')
     
 
   }
