@@ -55,33 +55,32 @@ const routes: Routes = [
         ]
       },
 
-
       {
-        path: 'colacao-i',
+        path: 'lanchemanha',
         children: [
           {
             path: '',
-            loadChildren: '../colacao-i/colacao-i.module#ColacaoIPageModule'
+            loadChildren: '../lanchemanha/lanchemanha.module#LanchemanhaPageModule'
           }
         ]
       },
-
-      {
-        path: 'colacao-ii',
-        children: [
-          {
-            path: '',
-            loadChildren: '../colacao-ii/colacao-ii.module#ColacaoIIPageModule'
-          }
-        ]
-      },
-
+      
       {
         path: 'almoco',
         children: [
           {
             path: '',
             loadChildren: '../almoco/almoco.module#AlmocoPageModule'
+          }
+        ]
+      },
+
+      {
+        path: 'lanchetarde',
+        children: [
+          {
+            path: '',
+            loadChildren: '../lanchetarde/lanchetarde.module#LanchetardePageModule'
           }
         ]
       },

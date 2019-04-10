@@ -1,0 +1,18 @@
+:host {
+    ion-content {
+      --background:none;
+      background:url('../../assets/bg_tela_03_tarde.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+
+  ion-button{
+
+    --background:none;
+    background-image: url("../../assets/pao.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    
+  }
