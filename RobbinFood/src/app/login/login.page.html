@@ -1,7 +1,17 @@
 <ion-content  >
      
-        <ion-input name="cadastro" placeholder="Teste seu nome" [(ngModel)]="inputValue"  ></ion-input>
-        <ion-button fill="outline" (click)="jogar()" > Jogar </ion-button>
-  
+<form  (ngSubmit)="onSubmit()">
+   <ion-item>
+     
+        <ion-input type="text" name="cadastro" placeholder="Seu Nome"  [(ngModel)]="inputValue"></ion-input>
+     
+   </ion-item>
+
+   <ion-item>
+        
+        <ion-button type="submit"  fill="outline" (click)="jogar()" > Jogar </ion-button>
+
+   </ion-item>
+</form>
 </ion-content>
 

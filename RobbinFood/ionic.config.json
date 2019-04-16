@@ -1,5 +1,7 @@
 {
   "name": "RobbinFood",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

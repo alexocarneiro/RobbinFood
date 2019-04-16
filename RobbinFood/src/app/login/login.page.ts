@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-login',
@@ -9,12 +10,26 @@ import { NavController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
   inputValue: string; 
+  loginForm: FormGroup;
 
-  constructor(private navCtrl : NavController) { }
+  constructor(
+    private navCtrl : NavController,
+    
+    
+    ) 
+    
+    { 
+      
+
+    }
 
   ngOnInit() {
   }
 
+
+  onSubmit(){
+  //fazer validação
+  };
 
   jogar(){
 
