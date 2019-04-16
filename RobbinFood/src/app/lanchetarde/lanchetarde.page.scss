@@ -8,11 +8,29 @@
   }
 
 
-  ion-button{
+  .response {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+  }
 
-    --background:none;
-    background-image: url("../../assets/pao.png");
-    background-size: 80%;
-    background-repeat: no-repeat;
+  .item {
+    height: 60px;
+  }
+
+  .img-fluid {
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+  .item-robin{
+    height: 200px;
     
   }

@@ -1,9 +1,12 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>jantar</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
-</ion-content>
+    <!-- <ion-row  >
+      <ion-col class="img-robin" > 
+        <img [src]="RobbinImage" class="item-robin">  
+      </ion-col>
+    </ion-row> -->
+    <ion-row class="response">
+      <ion-col *ngFor="let item of arrayImages" size="4" class="item">
+        <img [src]="item.imgUrl" [alt]="item.name" class="img-fluid" (click)="escolha()">
+      </ion-col>
+    </ion-row>
+  </ion-content>
