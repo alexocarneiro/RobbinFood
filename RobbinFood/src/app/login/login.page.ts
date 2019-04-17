@@ -1,3 +1,4 @@
+import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { FormGroup} from "@angular/forms";
@@ -9,13 +10,12 @@ import { FormGroup} from "@angular/forms";
 })
 export class LoginPage implements OnInit {
 
-  inputValue: string; 
+  inputValue; 
   loginForm: FormGroup;
 
   constructor(
     private navCtrl : NavController,
-    
-    
+    public UsersService: UsersService
     ) 
     
     { 
@@ -25,17 +25,11 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-
-
-  onSubmit(){
-  //fazer validação
-  };
-
+   
   jogar(){
 
     //código de criação de cadastro Firebase
-    console.log(this.inputValue);
-
+    this.UsersService.create(this.inputValue);
     this.navCtrl.navigateForward('tabs/home')
     
 
