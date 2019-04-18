@@ -1,10 +1,15 @@
      :host {
           ion-content {
             --background:none;
-            background:url('../../assets/TelaCadastro.jpeg');
+            background:url('../../assets/bg_tela_03_fundo.jpg');
             background-size: cover;
             background-position: center center;
           }
+        }
+
+        .item {
+          height: 200px;
+          
         }
 
    

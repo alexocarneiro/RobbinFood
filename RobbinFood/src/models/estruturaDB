@@ -1,0 +1,27 @@
+{
+    "users":{
+        "uid":{
+            "name":
+            "email":
+            "senha":
+            "fase":
+            "dinheiros"
+            "pontos"
+        },
+
+        "uid2":{},
+        "uid3":{}
+    },
+
+    "alimentos":{
+        "ali1":{
+            "url":"",
+            "name":"",
+            "peso":,
+        },
+        "ali2"{},
+        "ali3"{}
+    }
+
+
+}
