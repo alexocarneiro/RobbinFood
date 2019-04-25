@@ -1,12 +1,16 @@
 <ion-content>
-        <ion-row  >
-          <ion-col class="img-robin" > 
-            <img [src]="RobbinImage" class="item-robin">  
-          </ion-col>
-        </ion-row>
-        <ion-row class="response">
-          <ion-col *ngFor="let item of arrayImages" size="4" class="item">
-            <img [src]="item.imgUrl" [alt]="item.name" class="img-fluid">
-          </ion-col>
-        </ion-row>
+    <br> <br>  <br> <br>  <br> <br>
+
+    <ion-row  >
+      <ion-col class="img-robin" >
+        <h1 class="ion-text-center"> 
+        <img [src]="RobbinImage" class="item-robin">
+      </h1>  
+      </ion-col>
+    </ion-row>
+    <ion-row class="response">
+      <ion-col *ngFor="let item of arrayImages" size="4" class="item">
+        <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
+      </ion-col>
+    </ion-row>
       </ion-content>

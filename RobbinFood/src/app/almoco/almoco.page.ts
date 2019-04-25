@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlmocoPage implements OnInit {
 
+  InputPontos;
   RobbinImage = '../../assets/robin_01.png';
 
   arrayImages = [
@@ -22,6 +23,24 @@ export class AlmocoPage implements OnInit {
   }
 
   refreshArray() { 
-    this.arrayImages = []; 
+    this.arrayImages = [];
+    this.arrayImages = [
+      { imgUrl: '../../assets/Cenoura.png', name: 'Linguinha 1'},
+      { imgUrl: '../../assets/coisa_verde.png', name: 'Linguinha 2'},
+      { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
+    ]; 
   }
+
+  escolheAlimento(){
+    let pontos = 10;
+    let valAtual =  8;
+    if (pontos > valAtual){
+      this.RobbinImage = '../../assets/robin_04_2.png';
+
+    }
+    
+    this.refreshArray();
+
+  }
+
 }

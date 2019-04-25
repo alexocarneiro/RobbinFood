@@ -1,7 +1,19 @@
-
-
-
-
 <ion-content>
+    <br><br>
+    <ion-row>
+        <ion-col class="ion-text-center" >
+            <h1 class="style-text" > Feira do Robbin </h1>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="response">
+        <ion-col *ngFor="let item of arrayImages" size="4" class="item">
+            <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
+        </ion-col>
+    </ion-row>
+
+
+
+
 
 </ion-content>
