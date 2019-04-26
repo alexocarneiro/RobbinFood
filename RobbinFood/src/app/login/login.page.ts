@@ -1,7 +1,10 @@
+import { AuthService } from './../auth.service';
 import { UsersService } from './../users.service';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { User } from 'src/models/user.model';
+
+
 
 
 @Component({
@@ -20,7 +23,7 @@ export class LoginPage implements OnInit {
   
 
   constructor(
-   
+    //public authService: AuthService,
     private navCtrl : NavController,
     public UsersService: UsersService
     ) {
@@ -32,17 +35,23 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
    
-
-  
-
   jogar(){
 
     let users = new User(this.inputValue,this.inputEmailValue,this.inputSenhaValue,'1','100','0');
+    
+  /* this.authService.createLogin({
+      email: users.email,
+      password: users.password
+    }).then(() => {
 
-    //código de criação de cadastro Firebase
+      this.UsersService.create(users);
+      this.navCtrl.navigateForward('tabs/home')
+
+    });*/
+
+    
     this.UsersService.create(users);
     this.navCtrl.navigateForward('tabs/home')
-    
 
   }
 

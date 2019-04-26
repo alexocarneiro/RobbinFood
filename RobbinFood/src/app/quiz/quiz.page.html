@@ -1,17 +1,26 @@
-<ion-content>
+<ion-content padding>
+  
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <h1 class="style-textH1" >Quiz do Robbin</h1>  
+    </ion-col>
+  </ion-row>
+      <ion-col class="ion-text-center">
+        <h2 class="style-textH2" >Qual melhor alimento pro Robbin?</h2>  
+      </ion-col>
+    
 
   <ion-row class="response">
-    <ion-col *ngFor="let item of arrayTemp" size="4" class="item">
+    
+    <ion-col *ngFor="let item of arrayImages" size="6" class="itemImg" >
       <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
     </ion-col>
+  
   </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <ion-button (click)="jogar()"> Jogar </ion-button>
-    </ion-col>
-  </ion-row>
+  
 
 
 
 </ion-content>
+

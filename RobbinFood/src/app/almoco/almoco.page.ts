@@ -1,4 +1,6 @@
+import { RegrasService } from './../regras.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-almoco',
@@ -17,7 +19,11 @@ export class AlmocoPage implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(
+
+      public Regras: RegrasService
+
+  ) { }
 
   ngOnInit() {
   }
@@ -36,6 +42,9 @@ export class AlmocoPage implements OnInit {
     let valAtual =  8;
     if (pontos > valAtual){
       this.RobbinImage = '../../assets/robin_04_2.png';
+    
+    
+    
 
     }
     

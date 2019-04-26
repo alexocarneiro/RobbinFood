@@ -10,13 +10,17 @@
 
   .response {
     position: absolute;
-    bottom: 100px;
+    top: 230px;
     left: 0;
     width: 100%;
   }
 
+  .itemImg {
+    height: 120px;
+  }
+
   .item {
-    height: 60px;
+    height: 90px;
   }
 
   .img-fluid {
@@ -27,4 +31,22 @@
     left: 0;
     right: 0;
     bottom: 0;
+    padding-bottom: 30px;
   }
+
+  .style-textH1{
+
+    color: yellow;
+    font-weight: 900;
+    font-size: 38px;
+
+}
+
+.style-textH2{
+
+  color: yellow;
+  font-weight: 900;
+  margin-bottom: 30px !important;
+  
+
+}

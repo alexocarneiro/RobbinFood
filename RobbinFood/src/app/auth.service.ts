@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth  } from "@angular/fire/auth";
-import { auth} from 'firebase/app';
+import { auth } from 'firebase/app';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { User} from '../models/user.model'
+
 
 
 
@@ -11,17 +12,22 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  authState$: Observable<firebase.User>;
+ authState$: Observable<firebase.User>;
 
-  constructor( public auth: AngularFireAuth ) {
+  constructor( public auth: AngularFireAuth ) { 
 
       this.authState$ = this.auth.authState;
 
     }
 
+    createLogin({ email, password }): Promise<auth.UserCredential> {
+      return this.auth.auth.signInWithEmailAndPassword(email, password);
+    }
+  }
+
 
     
 
     
 
-}
+

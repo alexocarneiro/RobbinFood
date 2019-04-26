@@ -26,7 +26,8 @@ import { AppComponent } from './app.component';
   AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig),
   AngularFirestoreModule,
-  AngularFireDatabaseModule
+  AngularFireDatabaseModule,
+  
   
 ],
   providers: [
