@@ -15,11 +15,27 @@ ion-content {
 
 }
 
+
+.responseStart {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 120px;
+}
+
 .response {
     position: absolute;
-    bottom: 100px;
     left: 0;
     width: 100%;
+    top: 260px;
+  }
+
+  .responseEnd {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    width: 100%;
+    
   }
 
   .item {
@@ -34,4 +50,14 @@ ion-content {
     left: 0;
     right: 0;
     bottom: 0;
+  }
+
+  .style-badge{
+
+    
+    color: yellow;
+    font-size: 25px;
+    font-weight: 900;
+    
+
   }

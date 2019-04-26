@@ -13,9 +13,25 @@ export class MercadoPage implements OnInit {
     { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
   ];
 
-  constructor() { }
+  constructor() {
+
+    
+      
+    //observable do firebase para atualizar o badge em tempo real
+
+   }
 
   ngOnInit() {
   }
+
+ 
+
+  comprar(){
+    //subtrair a cada clique -5 do valor que tem no firebase
+    // atualizar o badge
+    
+  }
+
+
 
 }

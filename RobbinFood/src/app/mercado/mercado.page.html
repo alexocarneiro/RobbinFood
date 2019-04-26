@@ -6,11 +6,30 @@
         </ion-col>
     </ion-row>
 
+    <ion-row class="responseStart">
+            <ion-col *ngFor="let item of arrayImages" size="4" class="item">
+                <img [src]="item.imgUrl"(click)="comprar()" [alt]="item.name" class="img-fluid" >
+            </ion-col>
+        </ion-row>
+
     <ion-row class="response">
         <ion-col *ngFor="let item of arrayImages" size="4" class="item">
-            <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
+            <img [src]="item.imgUrl"(click)="comprar()" [alt]="item.name" class="img-fluid" >
         </ion-col>
     </ion-row>
+
+    <ion-row class="responseEnd">
+            <ion-col *ngFor="let item of arrayImages" size="4" class="item">
+                <img [src]="item.imgUrl"(click)="comprar()" [alt]="item.name" class="img-fluid" >
+            </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="4">
+            <ion-badge class="style-badge"  >60</ion-badge>
+        </ion-col>
+    </ion-row>
+    
 
 
 

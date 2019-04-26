@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>quiz</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+  <ion-row class="response">
+    <ion-col *ngFor="let item of arrayTemp" size="4" class="item">
+      <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button (click)="jogar()"> Jogar </ion-button>
+    </ion-col>
+  </ion-row>
+
+
 
 </ion-content>

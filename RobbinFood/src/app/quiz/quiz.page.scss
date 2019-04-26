@@ -1,0 +1,30 @@
+:host {
+    ion-content {
+      --background:none;
+      background:url('../../assets/bg_tela_04_almoco.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+
+  .response {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+  }
+
+  .item {
+    height: 60px;
+  }
+
+  .img-fluid {
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
