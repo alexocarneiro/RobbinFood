@@ -20,9 +20,11 @@ export class AuthService {
 
     }
 
-    createLogin({ email, password }): Promise<auth.UserCredential> {
-      return this.auth.auth.signInWithEmailAndPassword(email, password);
-    }
+    createLogin({ email, password}): Promise<auth.UserCredential> {
+      return this.auth.auth
+        .createUserWithEmailAndPassword(email, password) // o método é esse
+        
+  }
   }
 
 
