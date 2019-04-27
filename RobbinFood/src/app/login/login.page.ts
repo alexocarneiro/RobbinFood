@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
   
 
   constructor(
-    //public authService: AuthService,
+    public authService: AuthService,
     private navCtrl : NavController,
     public UsersService: UsersService
     ) {
@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
 
     let users = new User(this.inputValue,this.inputEmailValue,this.inputSenhaValue,'1','100','0');
     
-  /* this.authService.createLogin({
+  this.authService.createLogin({
       email: users.email,
       password: users.password
     }).then(() => {
@@ -47,11 +47,11 @@ export class LoginPage implements OnInit {
       this.UsersService.create(users);
       this.navCtrl.navigateForward('tabs/home')
 
-    });*/
+    });
 
     
-    this.UsersService.create(users);
-    this.navCtrl.navigateForward('tabs/home')
+    /*this.UsersService.create(users);
+    this.navCtrl.navigateForward('tabs/home')*/
 
   }
 

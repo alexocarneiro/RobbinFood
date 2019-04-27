@@ -5,8 +5,8 @@
       </ion-col>
     </ion-row> -->
     <ion-row class="response">
-      <ion-col *ngFor="let item of arrayImages" size="4" class="item">
-        <img [src]="item.imgUrl" [alt]="item.name" class="img-fluid" (click)="escolha()">
+      <ion-col *ngFor="let food of foods | async" size="4" class="item" >
+        <img [src]="food.url"  class="img-fluid" (click)="escolha()">
       </ion-col>
     </ion-row>
   </ion-content>

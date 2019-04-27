@@ -1,5 +1,10 @@
+import { FoodsService } from './../foods.service';
+import { Food } from './../../models/food.model';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { AngularFireList } from 'angularfire2/database';
+
+
 
 @Component({
   selector: 'app-jantar',
@@ -9,16 +14,29 @@ import { NavController } from '@ionic/angular';
 export class JantarPage implements OnInit {
 
   RobbinImage = '../../assets/robin_01.png';
+  foods: AngularFireList<Food[]>;
 
-  arrayImages = [
+  /*arrayImages = [
     { imgUrl: '../../assets/Frango.png', name: 'Linguinha 1'},
     { imgUrl: '../../assets/peixe.png', name: 'Linguinha 2'},
     { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
-  ];
+  ];*/
 
-  constructor(private navCtrl: NavController) { }
+  arrayImages = []
+
+  constructor(
+    
+    public foodService: FoodsService,
+    private navCtrl: NavController
+    
+    ) { }
 
   ngOnInit() {
+  }
+
+
+  ionViewDidLoad(){
+    this.foods = this.foodService.foods;
   }
 
   jogar(){

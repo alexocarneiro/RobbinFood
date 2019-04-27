@@ -17,7 +17,7 @@ export class UsersService {
 
   ) {
 
-    this.users = af.list('/users') ;
+    this.users = this.af.list('/users') ;
 
    }
 
