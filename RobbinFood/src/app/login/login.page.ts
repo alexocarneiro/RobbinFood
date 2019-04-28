@@ -1,9 +1,12 @@
+import { auth } from 'firebase/app';
 import { AuthService } from './../auth.service';
 import { UsersService } from './../users.service';
 import { Component, OnInit, NgModule } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { User } from 'src/models/user.model';
 import { FormGroup, Validators, FormBuilder} from "@angular/forms";
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 
 
@@ -36,6 +39,7 @@ export class LoginPage implements OnInit {
         name: ['', [Validators.required, Validators.minLength(3)]],
         email: ['', Validators.compose([Validators.required, Validators.pattern(emailRegex)])],
         password: ['', [Validators.required, Validators.minLength(6)]],
+        
       });
 
       }
@@ -43,20 +47,23 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
    
- /* jogar(){
+ jogar(){
 
-    let users  = new User(this.inputValue,this.inputEmailValue,this.inputSenhaValue,'1','100','0');
+     let loginuser = this.loginForm.value;
     
      this.authService.createLogin({
-      email: users.email,
-      password: users.password
+      email: loginuser.email,
+      password: loginuser.password
     }).then(() => {
 
-      this.UsersService.create(users);
+      delete loginuser.password;
+      //loginuser.uid = auth.Auth.uid; 
+
+      this.UsersService.create(loginuser);
       this.navCtrl.navigateForward('tabs/home')
 
     });
 
-  }*/
+  }
 
 }

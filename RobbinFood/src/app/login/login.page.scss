@@ -9,7 +9,29 @@
 
         .itemImg {
           height: 200px;
-          
+          background-size: cover;
+        }
+
+        .style-input{
+          display:block;
+          margin-bottom:10px;
+          padding: 5px 5px;
+          border-radius: 30px;
+          border: none;
+          box-sizing: border-box;
+          width:100%;
+          background: white
+        }
+
+        .style-btn{
+          width:160px; 
+          display:block;
+          padding: 5px 5px;
+          border-radius: 30px;
+          border:none;
+          margin: 0 auto;
+          background: #f29200;
+          color: white;
         }
 
    

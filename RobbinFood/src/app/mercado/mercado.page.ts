@@ -7,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MercadoPage implements OnInit {
 
-  arrayImages = [
-    { imgUrl: '../../assets/Frango.png', name: 'Linguinha 1'},
-    { imgUrl: '../../assets/peixe.png', name: 'Linguinha 2'},
-    { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
+  inputBadge
+
+  arrayImages1 = [
+    { imgUrl: '../../assets/queijo.png', name: 'queijo', },
+    { imgUrl: '../../assets/queijo_pedaco.png', name: 'queijo_pedaco', dinheiro: 3},
+    { imgUrl: '../../assets/leite.png', name: 'leite', dinheiro: 3},
+  ];
+
+  arrayImages2 = [
+    { imgUrl: '../../assets/maca.png', name: 'maca', dinheiro: 3},
+    { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', dinheiro: 3},
+    { imgUrl: '../../assets/banana.png', name: 'banana', dinheiro: 3},
+  ];
+
+  arrayImages3 = [
+    { imgUrl: '../../assets/Cenoura.png', name: 'Cenoura',dinheiro: 3},
+    { imgUrl: '../../assets/coisa_verde.png', name: 'coisa_verde', dinheiro: 3},
+    { imgUrl: '../../assets/tomate.png', name: 'tomate', dinheiro: 3},
   ];
 
   constructor() {

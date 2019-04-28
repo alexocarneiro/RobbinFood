@@ -4,14 +4,20 @@ ion-content {
     --background: none;
      background: url('../../assets/bg_feira.jpg');
      background-size: cover;
-     background-position: center center;
+     background-position-y: 20%;
     }
 }
 
+
+
+ion-badge{
+  --position: none;
+}
 .style-text{
 
     color: yellow;
     font-weight: 900;
+   
 
 }
 
@@ -20,19 +26,19 @@ ion-content {
   position: absolute;
   left: 0;
   width: 100%;
-  top: 120px;
+  top: 140px;
 }
 
 .response {
     position: absolute;
     left: 0;
     width: 100%;
-    top: 260px;
+    top: 280px;
   }
 
   .responseEnd {
     position: absolute;
-    bottom: 120px;
+    bottom: 100px;
     left: 0;
     width: 100%;
     
@@ -53,11 +59,15 @@ ion-content {
   }
 
   .style-badge{
-
-    
     color: yellow;
     font-size: 25px;
     font-weight: 900;
-    
+  
+  }
 
+  .position-badge{
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
   }
