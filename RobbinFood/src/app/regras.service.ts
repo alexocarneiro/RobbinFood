@@ -1,17 +1,26 @@
+import { User } from './../models/user.model';
 import { Injectable } from '@angular/core';
+import { UsersService } from './users.service';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegrasService {
 
+
   
 
-  constructor() { }
+  constructor(
+
+    public users: UsersService
+
+  ) { }
 
 addPontosRefeicao(){
-let pontos = 10;  
-console.log(pontos += 40);
+
+    return this.users.updateUser(40,)
 
 }
 

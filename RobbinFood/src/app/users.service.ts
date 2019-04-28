@@ -17,7 +17,7 @@ export class UsersService {
 
   ) {
 
-    this.users = this.af.list('/users') ;
+   this.users = this.af.list('/users') ;
 
    }
 
@@ -25,6 +25,14 @@ export class UsersService {
 
       return this.users
       .push(user);
+
+    }
+
+
+    updateUser(val){
+
+      return this.af.object(`/users/uId/pontos`).
+      set(val);
 
     }
 

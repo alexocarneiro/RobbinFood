@@ -35,9 +35,7 @@ export class JantarPage implements OnInit {
   }
 
 
-  ionViewDidLoad(){
-    this.foods = this.foodService.foods;
-  }
+ 
 
   jogar(){
 

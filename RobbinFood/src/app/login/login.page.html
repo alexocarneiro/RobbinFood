@@ -15,7 +15,22 @@
           </ion-col>
      </ion-row>
 
-    <ion-row>
+     <form [formGroup]="loginForm" (ngSubmit)="jogar(); $event.preventDefault()" >
+          <ion-item >
+               <ion-input type="text" placeholder="Nome" formControlName="name" ></ion-input>
+          </ion-item>
+          <ion-item >
+               <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item >
+               <ion-input type="password" placeholder="Senha" formControlName="password" ></ion-input>
+          </ion-item>
+          <ion-item>
+               <ion-button type="submit"  fill="outline" [disabled]="loginForm.invalid"  > Jogar </ion-button>
+          </ion-item>
+     </form>
+
+    <!--<ion-row>
         <ion-col>
           <ion-item lines="none" >
                <ion-input type="text" placeholder="Nome" [(ngModel)]="inputValue" ></ion-input>
@@ -30,7 +45,7 @@
                <ion-button type="submit"  fill="outline" (click)="jogar()" > Jogar </ion-button>
           </ion-item>
         </ion-col>
-     </ion-row>
+     </ion-row>-->
 </ion-grid>
          
 </ion-content>

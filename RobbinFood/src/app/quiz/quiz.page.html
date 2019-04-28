@@ -12,9 +12,11 @@
 
   <ion-row class="response">
     
-    <ion-col *ngFor="let item of arrayImages" size="6" class="itemImg" >
+    <ion-col *ngFor="let item of arrayTemp" size="6" class="itemImg" >
       <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
     </ion-col>
+
+    <ion-button (click)="jogar()">Jogar</ion-button>
   
   </ion-row>
 
