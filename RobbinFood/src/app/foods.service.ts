@@ -8,6 +8,8 @@ import { Injectable } from '@angular/core';
 })
 export class FoodsService {
 
+   
+
    arrayImagesAlmoco1 = [
     { imgUrl: '../../assets/Cenoura.png', name: 'cenoura', peso: 3},
     { imgUrl: '../../assets/pizza.png', name: 'pizza', peso: 4},
@@ -41,21 +43,21 @@ export class FoodsService {
 
     arrayImagesCafe1 = [
       { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 8},
-      { imgUrl: '../../assets/tomate.png', name: 'tomate', peso: 3},
-      { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},]
+      { imgUrl: '../../assets/leite.png', name: 'tomate', peso: 3},
+      { imgUrl: '../../assets/geleia.png', name: 'geleia', peso: 12},]
 
     arrayImagesCafe2 = [
-        { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 8},
-        { imgUrl: '../../assets/tomate.png', name: 'tomate', peso: 3},
+        { imgUrl: '../../assets/maca.png', name: 'maca', peso: 8},
+        { imgUrl: '../../assets/pao.png', name: 'pao', peso: 3},
         { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},]
 
       arrayImagesCafe3 = [
-        { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 8},
-        { imgUrl: '../../assets/tomate.png', name: 'tomate', peso: 3},
-        { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},]
+        { imgUrl: '../../assets/refri.png', name: 'refri', peso: 8},
+        { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', peso: 3},
+        { imgUrl: '../../assets/queijo_pedaco.png', name: 'salgadinho', peso: 12},]
     
 
-  
+       
  
 
   constructor(

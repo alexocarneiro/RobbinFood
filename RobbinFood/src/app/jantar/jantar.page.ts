@@ -1,8 +1,6 @@
-import { FoodsService } from './../foods.service';
-import { Food } from './../../models/food.model';
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { AngularFireList } from 'angularfire2/database';
+import { FoodsService } from './../foods.service';
+import { RegrasService } from './../regras.service';
 
 
 
@@ -13,37 +11,45 @@ import { AngularFireList } from 'angularfire2/database';
 })
 export class JantarPage implements OnInit {
 
+  i = 0;
+  InputPontos;
   RobbinImage = '../../assets/robin_01.png';
-  foods: AngularFireList<Food[]>;
+  titleImage = '../../assets/logo_robin_food.png'
 
-  /*arrayImages = [
-    { imgUrl: '../../assets/Frango.png', name: 'Linguinha 1'},
-    { imgUrl: '../../assets/peixe.png', name: 'Linguinha 2'},
-    { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
-  ];*/
+  arrayImages = this.food.arrayImagesAlmoco3;
+  arrayTemp = [
 
-  arrayImages = []
+    [
+      { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 8},
+      { imgUrl: '../../assets/carne.png', name: 'abacaxi', peso: 3},
+      { imgUrl: '../../assets/hotdog.png', name: 'hotdog', peso: 12},],
+
+      [
+        { imgUrl: '../../assets/batata.png', name: 'batata', peso: 3},
+        { imgUrl: '../../assets/coisa_verde.png', name: 'coisa_verde', peso: 1},
+        { imgUrl: '../../assets/Frango.png', name: 'frango', peso: 4},]
+
+       
+
+  ]
+
 
   constructor(
-    
-    public foodService: FoodsService,
-    private navCtrl: NavController
-    
-    ) { }
+      public food: FoodsService,
+      public Regras: RegrasService
+
+  ) { }
 
   ngOnInit() {
   }
 
-
  
 
-  jogar(){
-
-    //código de criação de cadastro Firebase
-    
-
-    this.navCtrl.navigateForward('tabs/home')
+  escolheAlimento(){
+    this.arrayImages = this.arrayTemp[this.i];
+    this.i ++;
+    if(this.i === 3){
+      this.RobbinImage = '../../assets/robin_04_2.png';
+    }
   }
-
-
 }

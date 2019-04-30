@@ -24,6 +24,7 @@ export class LoginPage implements OnInit {
   inputEmailValue
   inputSenhaValue
   RobbinImage = '../../assets/robin_01.png'
+  titleImage = '../../assets/logo_robin_food.png'
   loginForm: FormGroup;
  
   constructor(

@@ -1,36 +1,39 @@
 :host {
-    ion-content {
-      --background:none;
-      background:url('../../assets/bg_tela_03_tarde.jpg');
-      background-size: cover;
-      background-position: center center;
-    }
+  ion-content {
+    --background:none;
+    background:url('../../assets/bg_tela_03_tarde.jpg');
+    background-size: cover;
+    background-position: center center;
   }
+}
+
+.response {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+}
+
+.item {
+  height: 60px;
+}
+
+.img-fluid {
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 
-  .response {
-    position: absolute;
-    bottom: 100px;
-    left: 0;
-    width: 100%;
-  }
+.item-robin{
+  height: 160px;
+  
+}
 
-  .item {
-    height: 60px;
-  }
-
-  .img-fluid {
-    height: 100%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-
-  .item-robin{
-    height: 200px;
-    
-  }
+.item-title{
+  height: 70px;
+}

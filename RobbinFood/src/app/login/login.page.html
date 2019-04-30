@@ -1,19 +1,21 @@
-<ion-content  >
-     <br><br>
+<ion-content  >     
 <ion-grid> 
-     <ion-row>
-          <ion-col class="ion-text-center" >
-               <h1 > Robbin Food </h1>
-          </ion-col>
-     </ion-row>
-     <br><br><br>
-     <ion-row>
-          <ion-col class="itemImg">
-          <h1 class="ion-text-center">
-               <img [src]="RobbinImage" class="itemImg">
-          </h1>
-          </ion-col>
-     </ion-row>
+     <br> 
+          <ion-row>
+            <ion-col >
+              <h1 class="ion-text-center">
+              <img [src]="titleImage" class="item-title">
+              </h1>
+            </ion-col>
+          </ion-row>
+
+          <ion-row  >
+            <ion-col class="img-robin" >
+              <h1 class="ion-text-center"> 
+              <img [src]="RobbinImage" class="item-robin">
+            </h1>  
+            </ion-col>
+          </ion-row>
 
      <form [formGroup]="loginForm" (ngSubmit)="jogar(); $event.preventDefault()" >
          
