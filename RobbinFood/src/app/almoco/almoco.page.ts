@@ -1,3 +1,4 @@
+import { FoodsService } from './../foods.service';
 import { RegrasService } from './../regras.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,16 +12,13 @@ export class AlmocoPage implements OnInit {
 
   InputPontos;
   RobbinImage = '../../assets/robin_01.png';
+  titleImage = '../../assets/logo_robin_food.png'
 
-  arrayImages = [
-    { imgUrl: '../../assets/Frango.png', name: 'Linguinha 1'},
-    { imgUrl: '../../assets/peixe.png', name: 'Linguinha 2'},
-    { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
-  ];
+  arrayImages = this.food.arrayImagesAlmoco2;
 
 
   constructor(
-
+      public food: FoodsService,
       public Regras: RegrasService
 
   ) { }
@@ -28,14 +26,7 @@ export class AlmocoPage implements OnInit {
   ngOnInit() {
   }
 
-  refreshArray() { 
-    this.arrayImages = [];
-    this.arrayImages = [
-      { imgUrl: '../../assets/Cenoura.png', name: 'Linguinha 1'},
-      { imgUrl: '../../assets/coisa_verde.png', name: 'Linguinha 2'},
-      { imgUrl: '../../assets/salgadinho.png', name: 'Linguinha 3'},
-    ]; 
-  }
+ 
 
   escolheAlimento(){
     let pontos = 10;
@@ -48,7 +39,7 @@ export class AlmocoPage implements OnInit {
 
     }
     
-    this.refreshArray();
+   
 
   }
 

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizPage implements OnInit {
 
-  arrayTemp = [];
+  arrayTemp = this.food.arrayImagesAlmoco1;
   
 
   constructor(
@@ -33,13 +33,13 @@ export class QuizPage implements OnInit {
     console.log("clicou");
 }*/
 
-jogar() {
+/*jogar() {
   var arr = []
   while(this.arrayTemp.length < 4) {
-      var r = Math.floor(Math.random()*this.food.arrayImages.length) + 1;
+      var r = Math.floor(Math.random()*this.food.arrayImagesAlmoco1.length) + 1;
       if(this.arrayTemp.indexOf(r) === -1) arr.push(r);
   }
-}
+}*/
 
 
 }
