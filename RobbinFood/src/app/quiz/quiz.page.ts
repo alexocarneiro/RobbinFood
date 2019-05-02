@@ -8,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizPage implements OnInit {
 
-  arrayTemp = this.food.arrayImagesAlmoco1;
+  arrayImages = this.food.arrayImagesAlmoco1;
+  titleImage = '../../assets/logo_robin_food.png'
+
+  
+  arrayTemp = [
+
+    
+      { imgUrl: '../../assets/batata.png', name: 'batata', peso: 3},
+      { imgUrl: '../../assets/coisa_verde.png', name: 'coisa_verde', peso: 1},
+      { imgUrl: '../../assets/Frango.png', name: 'frango', peso: 4},
+      { imgUrl: '../../assets/hambuguer.png', name: 'hamburguer', peso: 2}]
+
+     
   
 
   constructor(

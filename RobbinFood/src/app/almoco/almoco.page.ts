@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlmocoPage implements OnInit {
   i = 0;
+  ptRodada = 0;
   InputPontos;
   RobbinImage = '../../assets/robin_01.png';
   titleImage = '../../assets/logo_robin_food.png'
@@ -44,6 +45,7 @@ export class AlmocoPage implements OnInit {
  
 
   escolheAlimento(){
+    
     this.arrayImages = this.arrayTemp[this.i];
     this.i ++;
     if(this.i === 3){

@@ -1,7 +1,7 @@
 :host {
     ion-content {
       --background:none;
-      background:url('../../assets/bg_tela_04_almoco.jpg');
+      background:url('../../assets/bg_tela_quiz.jpg');
       background-size: cover;
       background-position: center center;
     }
@@ -16,11 +16,11 @@
   }
 
   .itemImg {
-    height: 120px;
+    height: 90px;
   }
 
   .item {
-    height: 90px;
+    height: 70px;
   }
 
   .img-fluid {
@@ -34,19 +34,8 @@
     padding-bottom: 30px;
   }
 
-  .style-textH1{
-
-    color: yellow;
-    font-weight: 900;
-    font-size: 38px;
-
-}
-
-.style-textH2{
-
-  color: yellow;
-  font-weight: 900;
-  margin-bottom: 30px !important;
   
 
+.item-title{
+  height: 100px;
 }

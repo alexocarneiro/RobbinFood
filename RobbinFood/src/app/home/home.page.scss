@@ -1,8 +1,18 @@
 :host {
     ion-content {
       --background:none;
-      background:url('../../assets/bg_tela_03_home.jpg');
+      background:url('../../assets/bg_tela_inicial.jpg');
       background-size: cover;
       background-position: center center;
     }
   }
+
+  .item-robin{
+    height: 200px;
+    
+  }
+
+  .item-title{
+    height: 100px;
+  }
+  
