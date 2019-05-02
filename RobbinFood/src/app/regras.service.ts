@@ -20,7 +20,6 @@ export class RegrasService {
 
 addPontosRefeicao(){
 
-    return this.users.updateUser(40,)
 
 }
 

@@ -58,10 +58,13 @@ export class LoginPage implements OnInit {
     }).then(() => {
 
       delete loginuser.password;
-      loginuser.uid = this.authService.authState$.uid;
+      loginuser.uid = this.authService.afAuth.authState.uid;
 
-      this.UsersService.create(loginuser);
+      this.UsersService.create(loginuser)
+      .then(() => {
       this.navCtrl.navigateForward('tabs/home')
+
+      });
 
     });
 

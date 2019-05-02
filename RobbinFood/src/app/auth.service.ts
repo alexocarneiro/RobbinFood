@@ -17,6 +17,7 @@ export class AuthService {
   constructor( public afAuth: AngularFireAuth ) { 
 
       this.authState$ = this.afAuth.authState;
+      
 
     }
 

@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MercadoPage implements OnInit {
 
   inputBadge
+  contBadge = 40;
 
   arrayImages1 = [
     { imgUrl: '../../assets/queijo.png', name: 'queijo', },
@@ -27,7 +29,10 @@ export class MercadoPage implements OnInit {
     { imgUrl: '../../assets/tomate.png', name: 'tomate', dinheiro: 3},
   ];
 
-  constructor() {
+  constructor(
+    public Navctrl: NavController
+
+  ) {
 
     
       
@@ -38,11 +43,13 @@ export class MercadoPage implements OnInit {
   ngOnInit() {
   }
 
- 
+  btnContinuar(){
+    this.Navctrl.navigateForward('/tabs/home')
+  }
 
   comprar(){
-    //subtrair a cada clique -5 do valor que tem no firebase
-    // atualizar o badge
+    this.contBadge -=1;
+    console.log(this.contBadge);
     
   }
 

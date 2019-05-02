@@ -1,7 +1,6 @@
 import { User } from './../models/user.model';
 import { Injectable } from '@angular/core';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule, AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import {  AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 
 
 
@@ -10,11 +9,10 @@ import { AngularFireDatabaseModule, AngularFireDatabase, AngularFireList } from 
 })
 export class UsersService {
 
-  users: AngularFireList<User>;
+  users: AngularFireList<User[]>;
 
   constructor(
     private af: AngularFireDatabase
-
   ) {
 
    this.users = this.af.list('/users') ;
@@ -23,16 +21,11 @@ export class UsersService {
 
     create(user: User) {
 
-      return this.users
-      .push(user);
+      return this.af.object(`/users/${user.uid}`).
+      set(user);
 
-    }
-
-
-    updateUser(val){
-
-      return this.af.object(`/users/uId/pontos`).
-      set(val);
+     /* return this.users
+      .push(user);*/
 
     }
 
