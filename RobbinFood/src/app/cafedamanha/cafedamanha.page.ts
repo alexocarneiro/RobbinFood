@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodsService } from './../foods.service';
 import { RegrasService } from './../regras.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cafedamanha',
@@ -10,31 +11,36 @@ import { RegrasService } from './../regras.service';
 export class CafedamanhaPage implements OnInit {
 
   i = 0;
+  ptRodada = 0;
   InputPontos;
   RobbinImage = '../../assets/robin_01.png';
   titleImage = '../../assets/logo_robin_food.png'
 
-  arrayImages = this.food.arrayImagesCafe1;
+  
   arrayTemp = [
 
     [
-      { imgUrl: '../../assets/maca.png', name: 'maca', peso: 8},
-      { imgUrl: '../../assets/pao.png', name: 'pao', peso: 3},
+      { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 6},
+      { imgUrl: '../../assets/leite.png', name: 'leite', peso: 3},
+      { imgUrl: '../../assets/geleia.png', name: 'geleia', peso: 12},],
+
+    [
+      { imgUrl: '../../assets/maca.png', name: 'maca', peso: 3},
+      { imgUrl: '../../assets/pao.png', name: 'pao', peso: 6},
       { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},],
 
       [
-        { imgUrl: '../../assets/refri.png', name: 'refri', peso: 8},
+        { imgUrl: '../../assets/refri.png', name: 'refri', peso: 12},
         { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', peso: 3},
-        { imgUrl: '../../assets/queijo_pedaco.png', name: 'salgadinho', peso: 12},]
-
-       
-
+        { imgUrl: '../../assets/queijo_pedaco.png', name: 'salgadinho', peso: 6},]
   ]
 
+  arrayImages = this.arrayTemp[this.i]
 
   constructor(
       public food: FoodsService,
-      public Regras: RegrasService
+      public Regras: RegrasService,
+      public navCtrl : NavController
 
   ) { }
 
@@ -42,18 +48,26 @@ export class CafedamanhaPage implements OnInit {
   }
 
  
-
-  escolheAlimento(){
-    this.arrayImages = this.arrayTemp[this.i];
-    this.i ++;
-    if(this.i === 3){
-      this.RobbinImage = '../../assets/robin_04_2.png';
-    }
-      
-      
-    
-
-      
-
+  btnContinuar(){
+    this.navCtrl.navigateForward('tabs/home')
   }
+
+  escolheAlimento(id){
+    this.i ++;
+    this.ptRodada += this.arrayImages[id].peso;
+    console.log( this.ptRodada)
+    this.arrayImages = this.arrayTemp[this.i];
+    
+    if(this.i === 3){
+      if(this.ptRodada <=9)
+        this.RobbinImage = '../../assets/robin_01.png';
+        else if(this.ptRodada <= 18)
+        this.RobbinImage = '../../assets/robin_02.png';
+        else 
+        this.RobbinImage = '../../assets/robin_04_2.png';
+            
+    }
+    
+      
+    }
 }

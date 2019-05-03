@@ -15,15 +15,13 @@
     </ion-col>
   </ion-row>
   <ion-row class="response">
-    <ion-col *ngFor="let item of arrayImages" size="4" class="item">
-      <img [src]="item.imgUrl"(click)="escolheAlimento()" [alt]="item.name" class="img-fluid" >
+    <ion-col *ngFor="let item of arrayImages; let id = index" size="4" class="item">
+      <img [src]="item.imgUrl"(click)="escolheAlimento(id)" [alt]="item.name" class="img-fluid" >
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-     
-        <ion-button class="style-btn" type="submit" > Continuar </ion-button>
-      
+        <ion-button class="style-btn" type="submit" (click)="btnContinuar()" > Continuar </ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
