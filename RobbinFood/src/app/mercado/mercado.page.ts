@@ -1,5 +1,6 @@
 import { NavController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
+import { RegrasService } from '../regras.service';
 
 @Component({
   selector: 'app-mercado',
@@ -10,6 +11,7 @@ export class MercadoPage implements OnInit {
 
   inputBadge
   contBadge = 40;
+  titleImage = '../../assets/logo_robin_food.png'
 
   arrayImages1 = [
     { imgUrl: '../../assets/queijo.png', name: 'queijo', },
@@ -30,7 +32,8 @@ export class MercadoPage implements OnInit {
   ];
 
   constructor(
-    public Navctrl: NavController
+    public Navctrl: NavController,
+    public regras: RegrasService
 
   ) {
 
@@ -44,6 +47,8 @@ export class MercadoPage implements OnInit {
   }
 
   btnContinuar(){
+    this.regras.addPontosMercado(40);
+    console.log(this.regras.ptGame)
     this.Navctrl.navigateForward('/tabs/home')
   }
 

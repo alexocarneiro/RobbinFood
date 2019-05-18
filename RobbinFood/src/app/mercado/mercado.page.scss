@@ -62,7 +62,14 @@ ion-badge{
     color: yellow;
     font-size: 25px;
     font-weight: 900;
+    position: absolute;
+    top:60px;
+    left: 300px;
   
+  }
+
+  .item-title{
+    height: 70px;
   }
 
   .position-badge{

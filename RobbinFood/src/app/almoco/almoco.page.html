@@ -1,4 +1,8 @@
-<ion-content>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<ion-content  padding>
   <br>
   <ion-row>
     <ion-col >
@@ -8,15 +12,15 @@
     </ion-col>
   </ion-row>
   <ion-row  >
-    <ion-col class="img-robin" >
+    <ion-col class="item-robin" >
       <h1 class="ion-text-center"> 
-      <img [src]="RobbinImage" class="item-robin">
+      <img [src]="RobbinImage"  class="animated rotateIn" >
     </h1>  
     </ion-col>
   </ion-row>
   <ion-row class="response">
     <ion-col *ngFor="let item of arrayImages; let id = index" size="4" class="item">
-      <img [src]="item.imgUrl"(click)="escolheAlimento(id)" [alt]="item.name" class="img-fluid" >
+      <img [src]="item.imgUrl"(click)="escolheAlimento(id)" [alt]="item.name" class="img-fluid" class="animated fadeInRightBig " >
     </ion-col>
   </ion-row>
   <ion-row>

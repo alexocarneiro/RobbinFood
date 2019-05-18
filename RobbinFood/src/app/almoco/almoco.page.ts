@@ -59,10 +59,8 @@ export class AlmocoPage implements OnInit {
     this.arrayImages = this.arrayTemp[this.i];
     
     if(this.i === 3){
-      if(this.ptRodada <=9)
+      if(this.ptRodada <=18)
         this.RobbinImage = '../../assets/robin_01.png';
-        else if(this.ptRodada <= 18)
-        this.RobbinImage = '../../assets/robin_02.png';
         else 
         this.RobbinImage = '../../assets/robin_04_2.png';
             

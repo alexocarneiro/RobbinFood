@@ -13,7 +13,7 @@ export class CafedamanhaPage implements OnInit {
   i = 0;
   ptRodada = 0;
   InputPontos;
-  RobbinImage = '../../assets/robin_01.png';
+  RobbinImage = '../../assets/robin_03.png';
   titleImage = '../../assets/logo_robin_food.png'
 
   
@@ -25,12 +25,12 @@ export class CafedamanhaPage implements OnInit {
       { imgUrl: '../../assets/geleia.png', name: 'geleia', peso: 12},],
 
     [
-      { imgUrl: '../../assets/maca.png', name: 'maca', peso: 3},
+      { imgUrl: '../../assets/hotdog.png', name: 'hotdog', peso: 3},
       { imgUrl: '../../assets/pao.png', name: 'pao', peso: 6},
       { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},],
 
       [
-        { imgUrl: '../../assets/refri.png', name: 'refri', peso: 12},
+        { imgUrl: '../../assets/maca.png', name: 'maca', peso: 3},
         { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', peso: 3},
         { imgUrl: '../../assets/queijo_pedaco.png', name: 'salgadinho', peso: 6},]
   ]
@@ -59,10 +59,8 @@ export class CafedamanhaPage implements OnInit {
     this.arrayImages = this.arrayTemp[this.i];
     
     if(this.i === 3){
-      if(this.ptRodada <=9)
+      if(this.ptRodada <=18)
         this.RobbinImage = '../../assets/robin_01.png';
-        else if(this.ptRodada <= 18)
-        this.RobbinImage = '../../assets/robin_02.png';
         else 
         this.RobbinImage = '../../assets/robin_04_2.png';
             

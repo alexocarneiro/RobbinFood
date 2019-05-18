@@ -7,6 +7,7 @@
           background-position: center center;
         }
       }
+      
 
       .response {
         position: absolute;
@@ -16,7 +17,20 @@
       }
 
       .item {
-        height: 60px;
+        height: 60px !important;
+      }
+
+      .animated{
+        
+        height: 100%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        
       }
 
       .img-fluid {
@@ -39,12 +53,12 @@
         background: #f29200;
         color: white;
         position: absolute;
-        top: 167px;
+        top: 190px;
         left: 26%;
       }
     
       .item-robin{
-        height: 160px;
+        height: 160px !important;
         
       }
 

@@ -21,7 +21,7 @@ export class AuthService {
 
     }
 
-    get isAuthenticated(): Observable<boolean> {
+    isAuthenticated(): Observable<boolean> {
       return this.authState$.pipe(map(user => user !== null));
     }
   
@@ -35,7 +35,11 @@ export class AuthService {
       return this.afAuth.auth
         .createUserWithEmailAndPassword(email, password) 
         
-  }
+    }
+
+    logaUsuario( email, password ): Promise<auth.UserCredential> {
+      return this.afAuth.auth.signInWithEmailAndPassword(email, password);
+    }
   }
 
 

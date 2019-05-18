@@ -1,7 +1,46 @@
 <ion-content>
- <ion-button shape="round" color="warning" href="/tabs/cafedamanha" > Café da Manhã  </ion-button><br>
- <ion-button shape="round" color="warning" href="/tabs/lanchemanha"> Lanche da manhã  </ion-button><br>
- <ion-button shape="round" color="warning" href="/tabs/almoco"> Almoço </ion-button><br>
- <ion-button shape="round" color="warning" href="/tabs/lanchetarde"> Lanche da tarde  </ion-button><br>
- <ion-button shape="round" color="warning"href="/tabs/jantar"> Jantar  </ion-button><br>
+    <br><br><br>
+    <ion-row>
+        <ion-col >
+            <h1 class="ion-text-center">
+                <img [src]="titleImage" class="item-title">
+            </h1>
+        </ion-col>
+    </ion-row>
+    <br><br>
+    <ion-row>
+        <ion-col>
+            <ion-button shape="round" class="style-btn" href="/tabs/cafedamanha" (click)="alimenta()" >
+                 Café da Manhã  
+            </ion-button>           
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-button shape="round" class="style-btn" href="/tabs/lanchemanha" (click)="alimenta()"> 
+                Lanche da manhã  
+            </ion-button>    
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-button shape="round" class="style-btn" href="/tabs/almoco" (click)="alimenta()" > 
+                Almoço 
+            </ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-button shape="round" class="style-btn" href="/tabs/lanchetarde" (click)="alimenta()" > 
+                Lanche da tarde 
+            </ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-button shape="round" class="style-btn" href="/tabs/jantar" (click)="alimenta()"> 
+                Jantar  
+            </ion-button>
+        </ion-col>
+    </ion-row>
 </ion-content>

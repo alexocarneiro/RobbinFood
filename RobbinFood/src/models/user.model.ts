@@ -4,9 +4,9 @@
 
         public name: string,
         public email: string,
-        public uid: string,
+        //public uid: string,
         public fase =1,
-        public dinheiros: string,
+        public moeda: string,
         public pontos: string
 
     ){

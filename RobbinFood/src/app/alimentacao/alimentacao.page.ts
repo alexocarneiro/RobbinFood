@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegrasService } from '../regras.service';
 
 @Component({
   selector: 'app-alimentacao',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlimentacaoPage implements OnInit {
 
-  constructor() { }
+  titleImage = '../../assets/logo_robin_food.png'
+
+  constructor(
+    public regras: RegrasService
+
+  ) { }
 
   ngOnInit() {
+  }
+
+
+  alimenta(){
+    this.regras.addPontosRefeicao(20);
+    console.log(this.regras.ptGame)
   }
 
 }

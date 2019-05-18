@@ -1,6 +1,7 @@
 import { User } from './../models/user.model';
 import { Injectable } from '@angular/core';
 import { UsersService } from './users.service';
+import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 
 
 
@@ -9,37 +10,37 @@ import { UsersService } from './users.service';
 })
 export class RegrasService {
 
-
-  
+  ptGame = 1000;
 
   constructor(
 
-    public users: UsersService
+    public userService: UsersService,
+    public af: AngularFireDatabase
 
-  ) { }
+  ) {
 
-addPontosRefeicao(){
+    }
 
+  addPontosRefeicao(ptRefeicao){
+    this.ptGame -= ptRefeicao;
 
-}
-
-
-addPontosMercado()
-{
-  //No clique do botão de alguma das refeições adiciona 20 pt nos ponto do usuário no firebase
-}
-
-addPontosQuiz(){
-//No clique do botão de alguma das refeições adiciona 20 pt nos ponto do usuário no firebase
-}
-
-progressGame(){
-  //um switc case que tem sua várivel sempre atualizada pelo valor dos pontos do usuário no firebase
-  // e ai vai validando cada case para ir mudando de fase e finalizar o joo
-
-}
+  } 
 
 
+  addPontosMercado(ptMercado) 
+  {
+    this.ptGame -= ptMercado 
+  }
 
+  
+
+  addPontosQuiz(ptQuiz){
+    this.ptGame -= ptQuiz
+    
+  }
+
+  getAttributesUser(user,op): AngularFireList<User> {
+    return <AngularFireList<User>><unknown>this.af.object(`/users/${user}/${op}`)
+  }
 
 }
