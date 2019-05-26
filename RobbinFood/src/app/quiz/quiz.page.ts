@@ -14,44 +14,44 @@ export class QuizPage implements OnInit {
   ptRodada = 0;
   
   titleImage = '../../assets/logo_robin_food.png'
-  RobbinImage
+  
 
   
   arrayTemp = [
 
     [
-      { imgUrl: '../../assets/batata.png', name: 'batata', peso: 3},
-      { imgUrl: '../../assets/coisa_verde.png', name: 'coisa_verde', peso: 1},
-      { imgUrl: '../../assets/Frango.png', name: 'frango', peso: 4},
-      { imgUrl: '../../assets/hambuguer.png', name: 'hamburguer', peso: 2}],
+      { imgUrl: '../../assets/batata.png', name: 'batata', peso: 7},
+      { imgUrl: '../../assets/coisa_verde.png', name: 'coisa_verde', peso: 3},
+      { imgUrl: '../../assets/Frango.png', name: 'frango', peso: 3},
+      { imgUrl: '../../assets/hambuguer.png', name: 'hamburguer', peso: 7}],
 
     [
       { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', peso: 3},
-      { imgUrl: '../../assets/hotdog.png', name: 'hotdog', peso: 1},
-      { imgUrl: '../../assets/geleia.png', name: 'geleia', peso: 4},
-      { imgUrl: '../../assets/carne.png', name: 'carne', peso: 2}],
+      { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 7},
+      { imgUrl: '../../assets/geleia.png', name: 'geleia', peso: 7},
+      { imgUrl: '../../assets/carne.png', name: 'carne', peso: 3}],
 
 
     [
 
-      { imgUrl: '../../assets/pizza.png', name: 'pizza', peso: 3},
-      { imgUrl: '../../assets/banana.png', name: 'banana', peso: 1},
-      { imgUrl: '../../assets/salgadinhho_batata.png', name: 'salgadinho_batata', peso: 4},
-      { imgUrl: '../../assets/refri.png', name: 'refri', peso: 2}],
+      { imgUrl: '../../assets/Cenoura.png', name: 'cenoura', peso: 3},
+      { imgUrl: '../../assets/banana.png', name: 'banana', peso: 3},
+      { imgUrl: '../../assets/salgadinhho_batata.png', name: 'salgadinho_batata', peso: 3},
+      { imgUrl: '../../assets/refri.png', name: 'refri', peso: 7}],
 
     [
 
       { imgUrl: '../../assets/tomate.png', name: 'tomate', peso: 3},
-      { imgUrl: '../../assets/pao.png', name: 'pao', peso: 1},
-      { imgUrl: '../../assets/maca.png', name: 'maca', peso: 4},
-      { imgUrl: '../../assets/queijo_pedaco.png', name: 'queijo_pedaco', peso: 2}],
+      { imgUrl: '../../assets/maca.png', name: 'maca', peso: 3},
+      { imgUrl: '../../assets/hotdog.png', name: 'hodog', peso: 7},
+      { imgUrl: '../../assets/queijo_pedaco.png', name: 'queijo_pedaco', peso: 3}],
 
     [
 
       { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 3},
-      { imgUrl: '../../assets/Cenoura.png', name: 'cenoura', peso: 1},
-      { imgUrl: '../../assets/leite.png', name: 'leite', peso: 4},
-      { imgUrl: '../../assets/peixe.png', name: 'peixe', peso: 2}],
+      { imgUrl: '../../assets/pizza.png', name: 'pizza', peso: 7},
+      { imgUrl: '../../assets/leite.png', name: 'leite', peso: 3},
+      { imgUrl: '../../assets/peixe.png', name: 'peixe', peso: 3}],
 
   ]
 
@@ -86,12 +86,11 @@ export class QuizPage implements OnInit {
     this.arrayImages = this.arrayTemp[this.i];
     
     if(this.i === 5){
-      if(this.ptRodada <=9)
-        this.RobbinImage = '../../assets/robin_01.png';
-        else if(this.ptRodada <= 18)
-        this.RobbinImage = '../../assets/robin_02.png';
-        else 
-        this.RobbinImage = '../../assets/robin_04_2.png';
+      if(this.ptRodada <=15)
+      this.navCtrl.navigateForward('/result')
+      else
+      this.navCtrl.navigateForward('/result2')
+
             
     }
     

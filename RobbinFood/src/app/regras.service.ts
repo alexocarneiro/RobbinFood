@@ -11,6 +11,7 @@ import { AngularFireList, AngularFireDatabase } from 'angularfire2/database';
 export class RegrasService {
 
   ptGame = 1000;
+  dinheiroMercado = 40;
 
   constructor(
 
@@ -25,6 +26,16 @@ export class RegrasService {
     this.ptGame -= ptRefeicao;
 
   } 
+
+  compraMercado(){
+    this.dinheiroMercado -=1;
+  }
+
+  ganhaDinheiro(){
+    this.dinheiroMercado +=20;
+  }
+
+  
 
 
   addPontosMercado(ptMercado) 

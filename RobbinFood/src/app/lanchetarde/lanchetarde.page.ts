@@ -60,8 +60,6 @@ export class LanchetardePage implements OnInit {
     if(this.i === 3){
       if(this.ptRodada <=9)
         this.RobbinImage = '../../assets/robin_01.png';
-        else if(this.ptRodada <= 18)
-        this.RobbinImage = '../../assets/robin_02.png';
         else 
         this.RobbinImage = '../../assets/robin_04_2.png';
             

@@ -1,0 +1,32 @@
+:host {
+    ion-content {
+      --background:none;
+      background:url('../../assets/bg_tela_03_fundo.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+
+  .fadeInUpBig{
+    height: 160px;
+    
+  }
+
+  .style-btn{
+    width:160px; 
+    display:block;    
+    border-radius: 30px;
+    border:none;
+    margin: 0 auto;
+    background: #f29200;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 28%;
+  }
+  
+
+.item-title{
+  height: 100px;
+}

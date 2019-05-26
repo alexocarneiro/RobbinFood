@@ -45,10 +45,10 @@ ion-badge{
   }
 
   .item {
-    height: 60px;
+    height: 60px !important;
   }
 
-  .img-fluid {
+  .fadeInUpBig {
     height: 100%;
     position: absolute;
     margin: auto;
@@ -58,7 +58,7 @@ ion-badge{
     bottom: 0;
   }
 
-  .style-badge{
+  .rubberBand{
     color: yellow;
     font-size: 25px;
     font-weight: 900;
@@ -82,7 +82,6 @@ ion-badge{
   .style-btn{
     width:160px; 
     display:block;
-    padding: 5px 5px;
     border-radius: 30px;
     border:none;
     margin: 0 auto;

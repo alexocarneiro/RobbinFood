@@ -24,10 +24,9 @@
           background: white
         }
 
-        .style-btn{
+        .pulse{
           width:160px; 
           display:block;
-          padding: 5px 5px;
           border-radius: 30px;
           border:none;
           margin: 0 auto;
@@ -38,13 +37,14 @@
           left: 110px;
         }
 
-        .item-robin{
+        .bounceInDown{
           height: 200px;
-          
+          background-size: cover;
+          bottom: 15px;
         }
   
-        .item-title{
-          height: 100px;
+        .swing{
+          height: 100px !important;
         }
         
    

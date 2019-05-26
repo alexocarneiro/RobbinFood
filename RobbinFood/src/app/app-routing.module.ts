@@ -13,9 +13,10 @@ const routes: Routes = [
   { path: 'mercado', loadChildren: './mercado/mercado.module#MercadoPageModule' },
   { path: 'quiz', loadChildren: './quiz/quiz.module#QuizPageModule' },
   { path: 'mudancafase', loadChildren: './mudancafase/mudancafase.module#MudancafasePageModule' },
-  { path: 'result-game', loadChildren: './result-game/result-game.module#ResultGamePageModule' },
   { path: 'lanchemanha', loadChildren: './lanchemanha/lanchemanha.module#LanchemanhaPageModule' },
-  { path: 'lanchetarde', loadChildren: './lanchetarde/lanchetarde.module#LanchetardePageModule' }
+  { path: 'lanchetarde', loadChildren: './lanchetarde/lanchetarde.module#LanchetardePageModule' },
+  { path: 'result', loadChildren: './result/result.module#ResultPageModule' },
+  { path: 'result2', loadChildren: './result2/result2.module#Result2PageModule' }
 
 ];
 @NgModule({

@@ -10,7 +10,7 @@ import { RegrasService } from '../regras.service';
 export class MercadoPage implements OnInit {
 
   inputBadge
-  contBadge = 40;
+  contBadge 
   titleImage = '../../assets/logo_robin_food.png'
 
   arrayImages1 = [
@@ -37,7 +37,7 @@ export class MercadoPage implements OnInit {
 
   ) {
 
-    
+    this.contBadge = this.regras.dinheiroMercado
       
     //observable do firebase para atualizar o badge em tempo real
 
@@ -53,9 +53,8 @@ export class MercadoPage implements OnInit {
   }
 
   comprar(){
-    this.contBadge -=1;
-    console.log(this.contBadge);
-    
+    this.regras.compraMercado();
+    this.contBadge = this.regras.dinheiroMercado; 
   }
 
 

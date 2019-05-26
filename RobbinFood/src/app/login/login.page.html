@@ -1,18 +1,22 @@
+<head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
 <ion-content  >     
 <ion-grid> 
      <br> 
           <ion-row>
-            <ion-col >
+            <ion-col class="item-title" >
               <h1 class="ion-text-center">
-              <img [src]="titleImage" class="item-title">
+              <img [src]="titleImage" class="animated  swing" >
               </h1>
             </ion-col>
           </ion-row>
 
           <ion-row  >
-            <ion-col class="img-robin" >
+            <ion-col class="img-robin" class="item-robin" >
               <h1 class="ion-text-center"> 
-              <img [src]="RobbinImage" class="item-robin">
+              <img [src]="RobbinImage" class="animated bounceInDown delay-2s" >
             </h1>  
             </ion-col>
           </ion-row>
@@ -27,7 +31,7 @@
           <ion-input class="style-input" type="password" placeholder="Senha" formControlName="password" ></ion-input>
          
            <br>
-          <ion-button class="style-btn" type="submit" > Jogar </ion-button>
+          <ion-button shape="round" type="submit" class="animated infinite pulse" > Jogar </ion-button>
           
      </form>
 

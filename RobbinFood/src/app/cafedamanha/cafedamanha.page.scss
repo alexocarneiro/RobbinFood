@@ -15,7 +15,7 @@
 }
 
 .item {
-  height: 60px;
+  height: 60px !important;
 }
 
 .img-fluid {
@@ -31,20 +31,29 @@
 .style-btn{
   width:160px; 
   display:block;
-  padding: 5px 5px;
   border-radius: 30px;
   border:none;
   margin: 0 auto;
   background: #f29200;
   color: white;
   position: absolute;
-  top: 167px;
+  top: 200px;
   left: 26%;
 }
 
+.animated{
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-.item-robin{
+.lightSpeedIn{
   height: 160px;
+  top: 10px;
   
 }
 

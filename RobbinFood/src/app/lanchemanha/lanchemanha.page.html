@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
 <ion-content>
   <br>
   <ion-row>
@@ -10,18 +13,18 @@
   <ion-row  >
     <ion-col class="img-robin" >
       <h1 class="ion-text-center"> 
-      <img [src]="RobbinImage" class="item-robin">
+      <img [src]="RobbinImage" class="animated lightSpeedIn delay-2s">
     </h1>  
     </ion-col>
   </ion-row>
   <ion-row class="response">
     <ion-col *ngFor="let item of arrayImages; let id = index" size="4" class="item">
-      <img [src]="item.imgUrl"(click)="escolheAlimento(id)" [alt]="item.name" class="img-fluid" >
+      <img [src]="item.imgUrl"(click)="escolheAlimento(id)" [alt]="item.name" class="animated fadeInRightBig" >
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-        <ion-button class="style-btn" type="submit" (click)="btnContinuar()" > Continuar </ion-button>
+        <ion-button shape="round" class="style-btn" type="submit" (click)="btnContinuar()" > Continuar </ion-button>
     </ion-col>
   </ion-row>
 </ion-content>
