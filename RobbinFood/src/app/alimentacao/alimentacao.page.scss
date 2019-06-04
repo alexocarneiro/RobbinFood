@@ -2,22 +2,23 @@
     ion-content {
     
         --background: none;
-         background: url('../../assets/bg_tela_03_fundo.jpg');
+         background: url('../../assets/bg_teste_03.jpg');
          background-size: cover;
          background-position: center center;
         }
     }
 
     .zoomInDown{
-        width:160px; 
+        width:200px; 
         display:block;
         border-radius: 30px;
         border:none;
         margin: 0 auto;
         background: #f29200;
         color: white;
+        
       }
 
       .item-title{
-        height: 100px;
+        height: 90px;
       }

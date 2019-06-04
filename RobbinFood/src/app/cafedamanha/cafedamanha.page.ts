@@ -20,19 +20,19 @@ export class CafedamanhaPage implements OnInit {
   arrayTemp = [
 
     [
-      { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 6},
+      { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 3},
       { imgUrl: '../../assets/leite.png', name: 'leite', peso: 3},
       { imgUrl: '../../assets/geleia.png', name: 'geleia', peso: 12},],
 
     [
       { imgUrl: '../../assets/hotdog.png', name: 'hotdog', peso: 3},
-      { imgUrl: '../../assets/pao.png', name: 'pao', peso: 6},
+      { imgUrl: '../../assets/pao.png', name: 'pao', peso: 3},
       { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},],
 
       [
         { imgUrl: '../../assets/maca.png', name: 'maca', peso: 3},
         { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', peso: 3},
-        { imgUrl: '../../assets/queijo_pedaco.png', name: 'salgadinho', peso: 6},]
+        { imgUrl: '../../assets/queijo_pedaco.png', name: 'salgadinho', peso: 3},]
   ]
 
   arrayImages = this.arrayTemp[this.i]
@@ -56,10 +56,11 @@ export class CafedamanhaPage implements OnInit {
     this.i ++;
     this.ptRodada += this.arrayImages[id].peso;
     console.log( this.ptRodada)
+    this.Regras.ptAlimentacaoDia += this.ptRodada;
     this.arrayImages = this.arrayTemp[this.i];
     
     if(this.i === 3){
-      if(this.ptRodada <=18)
+      if(this.ptRodada <=9)
         this.RobbinImage = '../../assets/robin_01.png';
         else 
         this.RobbinImage = '../../assets/robin_04_2.png';

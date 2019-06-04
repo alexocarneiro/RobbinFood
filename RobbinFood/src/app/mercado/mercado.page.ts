@@ -1,4 +1,4 @@
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { RegrasService } from '../regras.service';
 
@@ -33,10 +33,11 @@ export class MercadoPage implements OnInit {
 
   constructor(
     public Navctrl: NavController,
-    public regras: RegrasService
+    public regras: RegrasService,
+    public alertCtrl: AlertController
 
   ) {
-
+    this.dicaMercado();
     this.contBadge = this.regras.dinheiroMercado
       
     //observable do firebase para atualizar o badge em tempo real
@@ -57,6 +58,14 @@ export class MercadoPage implements OnInit {
     this.contBadge = this.regras.dinheiroMercado; 
   }
 
+  async dicaMercado(){
+    let alert = await this.alertCtrl.create({
+      header: 'Dica do Robin!',
+      message: "É sempre importante escolher alimentos saudáveis! <br> Isto deixa Robin muito animado para salvar o vilarejo!",
+      buttons:['OK']
+    });
 
+    await alert.present();
+  }
 
 }

@@ -22,17 +22,17 @@ export class AlmocoPage implements OnInit {
     [
       { imgUrl: '../../assets/Cenoura.png', name: 'cenoura', peso: 3},
       { imgUrl: '../../assets/pizza.png', name: 'pizza', peso: 12},
-      { imgUrl: '../../assets/carne.png', name: 'carne', peso: 6},],
+      { imgUrl: '../../assets/carne.png', name: 'carne', peso: 3},],
 
     [
-      { imgUrl: '../../assets/peixe.png', name: 'pexie', peso: 6},
+      { imgUrl: '../../assets/peixe.png', name: 'pexie', peso: 3},
       { imgUrl: '../../assets/tomate.png', name: 'tomate', peso: 3},
       { imgUrl: '../../assets/hambuguer.png', name: 'hamburguer', peso: 12},],
 
     [
       { imgUrl: '../../assets/batata.png', name: 'batata', peso: 12},
       { imgUrl: '../../assets/coisa_verde.png', name: 'coisa_verde', peso: 3},
-      { imgUrl: '../../assets/Frango.png', name: 'frango', peso: 6},]       
+      { imgUrl: '../../assets/Frango.png', name: 'frango', peso: 3},]       
 
   ]
 
@@ -56,10 +56,11 @@ export class AlmocoPage implements OnInit {
     this.i ++;
     this.ptRodada += this.arrayImages[id].peso;
     console.log( this.ptRodada)
+    this.Regras.ptAlimentacaoDia += this.ptRodada;
     this.arrayImages = this.arrayTemp[this.i];
     
     if(this.i === 3){
-      if(this.ptRodada <=18)
+      if(this.ptRodada <=9)
         this.RobbinImage = '../../assets/robin_01.png';
         else 
         this.RobbinImage = '../../assets/robin_04_2.png';

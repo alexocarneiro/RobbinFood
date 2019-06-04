@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  RobbinImage = '../../assets/robin_01.png'
+  RobbinImage = '../../assets/robin_03.png'
   titleImage = '../../assets/logo_robin_food.png'
 
   constructor() { }

@@ -22,10 +22,10 @@ export class LanchemanhaPage implements OnInit {
   [
     { imgUrl: '../../assets/banana.png', name: 'banana', peso: 3},
     { imgUrl: '../../assets/salgadinho.png', name: 'salgadinho', peso: 12},
-    { imgUrl: '../../assets/queijo_pedaco.png', name: 'queijo_pedaco', peso: 6},],
+    { imgUrl: '../../assets/queijo_pedaco.png', name: 'queijo_pedaco', peso: 3},],
 
   [
-    { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 6},
+    { imgUrl: '../../assets/queijo.png', name: 'queijo', peso: 3},
     { imgUrl: '../../assets/abacaxi.png', name: 'abacaxi', peso: 3},
     { imgUrl: '../../assets/hotdog.png', name: 'hotdog', peso: 12},],
 
@@ -55,7 +55,9 @@ export class LanchemanhaPage implements OnInit {
   escolheAlimento(id){
     this.i ++;
     this.ptRodada += this.arrayImages[id].peso;
-    console.log( this.ptRodada)
+    
+    this.Regras.ptAlimentacaoDia += this.ptRodada;
+    console.log(this.Regras.ptAlimentacaoDia)
     this.arrayImages = this.arrayTemp[this.i];
     
     if(this.i === 3){

@@ -1,19 +1,22 @@
 :host {
     ion-content {
       --background:none;
-      background:url('../../assets/bg_tela_inicial.jpg');
+      background:url('../../assets/bg_tela_final.jpg');
       background-size: cover;
       background-position: center center;
     }
   }
 
   .wobble{
-    height: 200px;
-    
-    
+    height: 160px;
+    display:block;
+    margin: 0 auto;
+    position: absolute;
+    top: 170px;
+    left: 40%;
   }
 
   .item-title{
-    height: 100px;
+    height: 90px;
   }
   

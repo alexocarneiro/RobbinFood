@@ -2,27 +2,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 <ion-content>
-
-    <br><br>
-    <ion-row>
-        <ion-col >
-          <h1 class="ion-text-center">
-            <img [src]="titleImage" class="item-title">
-          </h1>
-        </ion-col>
-      </ion-row>
-     
-      <ion-row  >
-        <ion-col class="img-robin" >
-          <h1 class="ion-text-center"> 
-            <img [src]="RobbinImage" class="item-robin" class="animated bounceInDown delay-2s">
-          </h1>  
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-            <ion-button shape="round" class="style-btn" type="submit" (click)="continue()" > Continuar </ion-button>
-        </ion-col>
-      </ion-row>
+  <br><br>
+  <ion-row>
+    <ion-col>
+      <h1 class="ion-text-center">
+        <img [src]="titleImage" class="item-title">
+      </h1>
+    </ion-col>
+  </ion-row>
+  <br><br>
+  <ion-row>
+    <ion-col >
+        <img [src]="RobbinImage" class="item-robin">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+        <img [src]="CestaVazia" class="animated fadeInUpBig">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button shape="round" class="style-btn" type="submit" (click)="continue()"> Continuar </ion-button>
+    </ion-col>
+  </ion-row>
 
 </ion-content>
